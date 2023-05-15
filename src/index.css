@@ -1,0 +1,174 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600;700;800;900&display=swap');
+
+
+:root{
+  --white: #fff;
+  --black: #111;
+  --blue: #3a80e9;
+  --grey: #888;
+  --darkgrey: #1b1b1b;
+  --green: #61c96f;
+  --red: #f94141;
+}
+
+[data-theme="light"] {
+  --white: #ffffff;
+  --black: #111;
+  --grey: #888;
+  --darkgrey: #1b1b1b;
+}
+
+[data-theme="dark"] {
+  --white: #111;
+  --black: #fff;
+  --grey: #888;
+  --darkgrey: #f3f3f3;
+}
+
+html{
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+body {
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: var(--black);
+  color: var(--white);
+  min-height: 100vh;
+}   
+
+h1,h2,h3,h4,h5,h6,p, span{
+  color: var(--white);
+}
+
+::selection{
+  color: var(--white);
+  background-color: var(--red);
+}
+
+
+/* width */
+::-webkit-scrollbar {
+  width: 0.6rem;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: var(--black)
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: var(--blue);
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+img {
+  -webkit-user-drag: none;
+  -khtml-user-drag: none;
+  -moz-user-drag: none;
+  -o-user-drag: none;
+  } 
+
+
+  a{
+    text-decoration: none;
+    color: var(--white);
+  }
+
+  .top-btn{
+    display: flex;
+    justify-content: center;
+    padding: 0.5rem;
+    height: 2rem;
+    width: 2rem;
+    background-color: var(--dark-grey);
+    border-radius: 50%;
+    align-items: center;
+    position: fixed;
+    right: 2rem;
+    bottom: 2rem;
+    border: 1px solid var(--blue);
+    cursor: pointer;
+    z-index: 1000;
+  }
+
+  .grey-container{
+    width: 90%;
+    display: block;
+    background-color: var(--dark-grey);
+    padding: 1rem;
+    margin: 0.5rem auto;
+    border-radius: 0.8rem; 
+  }
+
+  .div-flex{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 2rem;
+    margin: 1rem 1.5rem;
+  }
+
+  .select-coin{
+    border-radius: 50px !important;
+  }
+
+
+  .watchlist-empty-text{
+    text-align: center;
+    color: var(--grey);
+  }
+
+  .cursor{
+    
+  }
+.cursor-pointer{
+
+}
+
+  
+  @media only screen and (max-width: 800px) {
+    .top-btn{
+      right: 0.5rem;
+      bottom: 0.5rem;
+    }
+
+    .grey-container{
+      background-color: var(--dark-grey);
+      padding: 0.5rem 0.5rem;
+      border-radius: 0.8rem; 
+    }
+
+    .div-flex{
+      gap: 0.5rem;
+      margin: 1rem 0.5rem;
+    }
+
+    .crypto-heading{
+      display: none;
+    }
+  
+    .select-coin{
+      max-width: 120px !important;
+      font-size: 0.8rem !important;
+      padding: 0rem !important;
+      height: 35px !important;
+      border-radius: 50px !important;
+
+    }
+
+    .watchlist-empty-text{
+      color: var(--grey);
+      font-size: 1rem;
+      text-align: center;
+      align-items: center;
+    }
+  }
